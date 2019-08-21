@@ -55,9 +55,9 @@
       }
     },
     {
-      "id": "blinds",
+      "id": "roller_blind",
       "name": {
-        "en": "Blinds",
+        "en": "Roller blind",
         "nl": "Rolgordijn",
         "de": "Rollo"
       },
@@ -68,11 +68,12 @@
       "zigbee": {
         "manufacturerName": "IKEA of Sweden",
         "productId": [
-          "TRADFRI blinds"
+          "FYRTUR block-out roller blind",
+          "KADRILJ roller blind"
         ],
-        "deviceId": 203,
+        "deviceId": 514,
         "profileId": [
-          1234
+          260
         ],
         "learnmode": {
           "instruction": {
