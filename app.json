@@ -88,6 +88,37 @@
       }
     },
     {
+      "id": "open_close_remote",
+      "name": {
+        "en": "Open/close remote",
+        "nl": "Open/sluit afstandsbediening",
+      },
+      "class": "remote",
+      "capabilities": [
+        "onoff"
+      ],
+      "zigbee": {
+        "manufacturerName": "IKEA of Sweden",
+        "productId": [
+          "TRADFRI open/close remote"
+        ],
+        "deviceId": 515,
+        "profileId": [
+          260
+        ],
+        "learnmode": {
+          "instruction": {
+            "en": "Open up the back side of the button and press the link button until the LED starts blinking.\n\nNote: it can take 15-20 seconds before pairing starts, if the device does not pair within 15-20 seconds please try again.",
+            "nl": "Schroef de achterkant open en druk op de koppelknop tot de LED gaat knipperen.\n\nLet op: het kan 15-20 seconden duren voor het apparaat wordt gekoppeld, gebeurt dit niet binnen 15-20 seconden probeer het dan nog eens."
+          }
+        }
+      },
+      "images": {
+        "large": "/drivers/blinds/assets/images/large.png",
+        "small": "/drivers/blinds/assets/images/small.png"
+      }
+    },
+    {
       "id": "control_outlet",
       "name": {
         "en": "Control Outlet",
