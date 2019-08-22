@@ -19,6 +19,14 @@
     "name": "Athom B.V.",
     "email": "info@athom.com"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Lucas van der Have",
+        "email": "lucasvdhave@gmail.com"
+      }
+    ]
+  },
   "images": {
     "large": "/assets/images/large.png",
     "small": "/assets/images/small.png"
