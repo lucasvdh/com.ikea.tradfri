@@ -63,7 +63,8 @@
       },
       "class": "blinds",
       "capabilities": [
-        "onoff"
+        "measure_battery",
+        "windowcoverings_state"
       ],
       "zigbee": {
         "manufacturerName": "IKEA of Sweden",
@@ -76,9 +77,10 @@
           260
         ],
         "learnmode": {
+          "image": "/drivers/roller_blind/assets/learnmode.svg",
           "instruction": {
-            "en": "Simultaneously press the two buttons next to the battery cover. If the LED starts blinking the device is ready to pair.\n\nNote: it can take 15-20 seconds before pairing starts, if the device does not pair within 15-20 seconds please try again.",
-            "nl": "Druk  tegelijk de twee knoppen naast de batterijklep in. Als de LED gaat knipperen is het apparaat klaar om te koppelen.\n\nLet op: het kan 15-20 seconden duren voor het apparaat wordt gekoppeld, gebeurt dit niet binnen 15-20 seconden probeer het dan nog eens."
+            "en": "Simultaneously press the two buttons next to the battery cover until the LED starts blinking.\n\nNote: it can take 15-20 seconds before pairing starts, if the device does not pair within 15-20 seconds please try again.",
+            "nl": "Druk tegelijk de twee knoppen naast de batterijklep in tot de LED begint te knipperen.\n\nLet op: het kan 15-20 seconden duren voor het apparaat wordt gekoppeld, gebeurt dit niet binnen 15-20 seconden probeer het dan nog eens."
           }
         }
       },
@@ -91,11 +93,12 @@
       "id": "open_close_remote",
       "name": {
         "en": "Open/close remote",
-        "nl": "Open/sluit afstandsbediening",
+        "nl": "Open/sluit afstandsbediening"
       },
       "class": "remote",
       "capabilities": [
-        "onoff"
+        "onoff",
+        "measure_battery"
       ],
       "zigbee": {
         "manufacturerName": "IKEA of Sweden",

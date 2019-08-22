@@ -2,15 +2,40 @@
 
 const ZigBeeDevice = require('homey-meshdriver').ZigBeeDevice;
 
-/**
- * TODO: what happens if the device gets switched externally, does it send a report to Homey?
- */
-class ControlOutlet extends ZigBeeDevice {
-    onMeshInit() {
+class RollerBlind extends ZigBeeDevice {
 
-        // Register onoff capability
-        this.registerCapability('onoff', 'genOnOff');
+    onMeshInit() {
+        this.registerCapability('measure_battery', 'genPowerCfg');
+
+        this.registerCapabilityListener('windowcoverings_state', value => {
+            return this._onWindowCoveringsStateSet(value);
+        });
     }
+
+    _onWindowCoveringsStateSet(state) {
+        let action = this.mapWindowCoveringsStateToAction(state);
+
+        return this.node.endpoints[this.getClusterEndpoint('closuresWindowCovering')].clusters.closuresWindowCovering
+            .do(action, []).then(() => {
+                return null;
+            }, error => {
+                this.log('error', error);
+            });
+    }
+
+    mapWindowCoveringsStateToAction(state) {
+        switch (state) {
+            case 'up':
+                return 'upOpen';
+            case 'down':
+                return 'downClose';
+            case 'idle':
+                return 'stop';
+        }
+
+        throw new Error(`Could not map window coverings state "${state}" to ZigBee action`);
+    }
+
 }
 
-module.exports = ControlOutlet;
+module.exports = RollerBlind;
