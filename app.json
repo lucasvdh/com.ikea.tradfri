@@ -109,7 +109,7 @@
         "measure_battery"
       ],
       "zigbee": {
-        "manufacturerName": "KE",
+        "manufacturerName": "IKEA of Sweden",
         "productId": [
           "TRADFRI open/close remote"
         ],
@@ -909,6 +909,36 @@
               "de": "Wert"
             },
             "example": 1
+          }
+        ]
+      },
+      {
+        "id": "remote_open",
+        "title": {
+          "en": "Remote open pressed",
+          "nl": "Afstandsbedieningen open ingedrukt",
+          "de": "Fernbedienungen öffnen gedrückt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=open_close_remote"
+          }
+        ]
+      },
+      {
+        "id": "remote_close",
+        "title": {
+          "en": "Remote close pressed",
+          "nl": "Afstandsbedieningen sluiten ingedrukt",
+          "de": "Fernbedienungen schließen gedrückt"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=open_close_remote"
           }
         ]
       },
